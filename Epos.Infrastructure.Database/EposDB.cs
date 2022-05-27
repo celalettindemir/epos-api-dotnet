@@ -15,7 +15,7 @@ namespace Epos.Infrastructure.Database
         public static IServiceCollection EposDatabaseConnection(this IServiceCollection services/*, IConfiguration cfg*/)
         {
             //string connectionString = cfg.GetConnectionString("DefaultConnection");
-            string connectionString = "User Id=epos;Password=253461Ep;Host=46.45.163.118;Database=Epos;Port=3306;CharSet=utf8;Convert Zero Datetime=True";
+            string connectionString = "DatabaseConnection";
 
             var configuration = Fluently.Configure()
                 .Database(MySQLConfiguration.Standard.ConnectionString(connectionString).ShowSql())
